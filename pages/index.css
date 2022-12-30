@@ -188,7 +188,7 @@ body.contact-on .contact-section {
 }
 .contact-close {
     position: absolute;
-	top: 20px;
+	top: 50px;
 	right: 20px;
 	width: 30px;
 	display: block;
@@ -255,7 +255,7 @@ body.contact-on .contact-section {
 .theater-close,
 .portrait-close {
     position: absolute;
-	top: 20px;
+	top: 50px;
 	right: 20px;
 	width: 30px;
 	display: block;
@@ -379,6 +379,7 @@ img:nth-child(3n+3):hover {
 }
 
 .simple img {
+    
 	width: 100%;
 	height: 100%;
 	display: block;

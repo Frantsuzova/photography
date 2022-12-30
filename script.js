@@ -42,3 +42,11 @@
 
 
 })(jQuery);
+
+let img = document.getElementsByTagName('img');
+
+for (let i in img) {
+    img[i].oncontextmenu = function () {
+        return false;
+    }
+}
