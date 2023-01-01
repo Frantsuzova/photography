@@ -1,5 +1,47 @@
 {
+  "browser": {
+    "[module-name]": false
+  },
   "dependencies": {
-    "bootstrap": "^5.2.3"
-  }
+    "autoprefixer": "^10.4.13",
+    "bootstrap": "^5.2.3",
+    "clean-webpack-plugin": "^4.0.0",
+    "css-declaration-sorter": "^6.3.1",
+    "cssnano": "^5.1.14",
+    "mini-css-extract-plugin": "^2.7.2",
+    "postcss": "^8.4.20",
+    "tailwindcss": "^3.2.4"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.7",
+    "@babel/preset-env": "^7.20.2",
+    "babel-loader": "^9.1.0",
+    "css-loader": "^6.7.3",
+    "gh-pages": "^4.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "postcss-loader": "^4.1.0",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1",
+    "webpack-dev-server": "^4.11.1"
+  },
+  "scripts": {
+    "build": "rm -rf dist && webpack",
+    "dev": "webpack serve",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
+  },
+  "name": "photography",
+  "description": "HTML, CSS, JavaScript",
+  "version": "1.0.0",
+  "main": "script.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frantsuzova/photography.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frantsuzova/photography/issues"
+  },
+  "homepage": "https://github.com/Frantsuzova/photography#readme"
 }
