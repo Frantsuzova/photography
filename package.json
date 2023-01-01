@@ -25,10 +25,10 @@
     "webpack-dev-server": "^4.11.1"
   },
   "scripts": {
-    "build": "rm -rf dist && webpack",
     "dev": "webpack serve",
+    "build": "webpack --mode production",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d dist"
   },
   "name": "photography",
   "description": "HTML, CSS, JavaScript",
@@ -43,5 +43,5 @@
   "bugs": {
     "url": "https://github.com/Frantsuzova/photography/issues"
   },
-  "homepage": "https://github.com/Frantsuzova/photography#readme"
+  "homepage": "https://github.com/Frantsuzova/photography"
 }
