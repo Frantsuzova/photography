@@ -22,3 +22,5 @@
  *
  * Date: 2022-12-20T21:28Z
  */
+
+/*! jQuery v3.6.3 | (c) OpenJS Foundation and other contributors | jquery.org/license */
