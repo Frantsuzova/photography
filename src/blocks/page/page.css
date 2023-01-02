@@ -14,11 +14,42 @@ body{
 	perspective: 800px;
 }
 a {
+	display: inline-block;
+	padding: 5px 0;
+	position: relative;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	font-family: 'Changa', sans-serif;
+	font-size: min(300%, 8vmin);
+	text-decoration: none;
+	background-size: 100% 200%;
+
 	cursor: pointer;
+	text-decoration: none;
+	background-image: linear-gradient(to right, rgb(255, 255, 255), rgb(158, 8, 156), #3333ff 50%, #fff 50%);
+  background-position: 100% 0%;
+  background-size: 200% 100%;
+  transition: all .5s ease-out;
 }
 a:hover {
-	text-decoration: none;
+	background-position: 0% 100%;
 }
+a:before {
+	content: "";
+	background: linear-gradient(to right, #3333ff, rgb(255, 255, 255), rgb(161, 158, 140));
+	display: block;
+	position: absolute;
+	bottom: 0;
+	right: 0;
+	width: 0;
+	height: 5px;
+	transition: all .5s ease-out;
+  }
+  a:hover::before {
+	width: 100%;
+  }
+
+
 ::selection {
 	color: #c4c3ca;
 	background-color: #000;
@@ -27,6 +58,7 @@ a:hover {
 	color: #c4c3ca;
 	background-color: #000;
 }
+
 
 .hero-section {
     position: relative;
@@ -146,6 +178,7 @@ body.portrait-on .hero-section {
 	-webkit-transition: all 200ms linear;
 	transition: all 200ms linear;
 }
+
 .contact-text:before {
 	position: absolute;
 	content: '';

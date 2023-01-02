@@ -5,6 +5,7 @@ const { CleanWebpackPlugin } = require("clean-webpack-plugin");
 // каждый раз при сборке проекта удаляет содержимое папки dist
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // учит «Вебпак» работать с css-файлами
+const webpack = require('webpack');
 
 module.exports = {
   entry: { main: "./src/pages/index.js" },
@@ -74,13 +75,31 @@ module.exports = {
           "postcss-loader",
         ],
       },
-    ],
+      //jquery
+      {
+        test: require.resolve("jquery"),
+        loader: "expose-loader",
+        options: {
+          exposes: {
+            globalName: "$",
+            override: true,
+          },
+        },
+      },
+    ]
   },
+
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/pages/index.html", // путь к файлу index.html
     }),
     new CleanWebpackPlugin(),
     new MiniCssExtractPlugin(), // подключение плагина для объединения файлов
-  ],
+    new webpack.ProvidePlugin({
+      $: "jquery/dist/jquery.min.js",
+      jQuery: "jquery/dist/jquery.min.js",
+      "window.jQuery": "jquery/dist/jquery.min.js"
+    })
+  ]
+
 };

@@ -1,53 +1,56 @@
 import "./index.css";
-(function ($) {
+import $ from 'jquery'
+let a = $;
+
+(function (a) {
     "use strict";
 
     //сontact
 
-    $(".contact-text").on('click', function () {
-        $("body").addClass("contact-on");
+    a(".contact-text").on('click', function () {
+        a("body").addClass("contact-on");
     });
-    $(".contact-close").on('click', function () {
-        $("body").removeClass("contact-on");
+    a(".contact-close").on('click', function () {
+        a("body").removeClass("contact-on");
     });
 
 
     //travel
 
-    $(".travel").on('click', function () {
-        $("body").addClass("travel-on");
+    a(".travel").on('click', function () {
+        a("body").addClass("travel-on");
     });
-    $(".travel-close").on('click', function () {
-        $("body").removeClass("travel-on");
+    a(".travel-close").on('click', function () {
+        a("body").removeClass("travel-on");
     });
 
 
     //theater
 
-    $(".theater").on('click', function () {
-        $("body").addClass("theater-on");
+    a(".theater").on('click', function () {
+        a("body").addClass("theater-on");
     });
-    $(".theater-close").on('click', function () {
-        $("body").removeClass("theater-on");
+    a(".theater-close").on('click', function () {
+        a("body").removeClass("theater-on");
     });
 
 
     //portrait
 
-    $(".portrait").on('click', function () {
-        $("body").addClass("portrait-on");
+    a(".portrait").on('click', function () {
+        a("body").addClass("portrait-on");
     });
-    $(".portrait-close").on('click', function () {
-        $("body").removeClass("portrait-on");
+    a(".portrait-close").on('click', function () {
+        a("body").removeClass("portrait-on");
     });
 
 
 })(jQuery);
 
-let img = document.getElementsByTagName('img');
+//img antisave
 
-for (let i in img) {
-    img[i].oncontextmenu = function () {
-        return false;
-    }
+const img = document.getElementsByTagName('img');
+
+for (let i = 0; i < img.length; i++) {
+    img[i].addEventListener('contextmenu', event => event.preventDefault());
 }
